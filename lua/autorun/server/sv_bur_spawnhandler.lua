@@ -4,7 +4,7 @@ function BurPlayerBotSpawn(ply)
 	local Ents = ents.GetAll()
 	
 	for k,v in pairs(Ents) do
-		if not (v:GetClass() == "ent_bur_spawnpoint" or v:GetClass() == "ent_bur_spawnpointbot") then
+		if not (v:GetClass() == "ent_bur_spawnpoint" or v:GetModel() == "models/editor/playerstart.mdl") then
 			table.remove(Ents,k)
 		end
 	end
@@ -22,14 +22,14 @@ function BurPlayerBotSpawn(ply)
 			end
 			if #DesiredSpawns == 0 then
 				for k,v in pairs(Ents) do
-					if v:GetClass() == "ent_bur_spawnpointbot" then
+					if v:GetModel() == "models/editor/playerstart.mdl" then
 						table.Add(DesiredSpawns,{v})
 					end
 				end
 			end
 		else
 			for k,v in pairs(Ents) do
-				if v:GetClass() == "ent_bur_spawnpointbot" then
+				if v:GetModel() == "models/editor/playerstart.mdl" then
 					table.Add(DesiredSpawns,{v})
 				end
 			end

@@ -7,7 +7,7 @@ ENT.Author 				= ""
 ENT.Information 		= ""
 
 ENT.Spawnable 			= true
-ENT.AdminOnly			= true
+ENT.AdminOnly			= false
 ENT.Category			= "Spawnpoints"
 
 
